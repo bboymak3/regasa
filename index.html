@@ -35,6 +35,77 @@
     "areaServed": "Barinas, incluyendo todos sus municipios: Alberto Arvelo Torrealba, Andrés Eloy Blanco, Antonio José de Sucre, Arismendi, Barinas, Bolívar, Cruz Paredes, Ezequiel Zamora, Obispos, Pedraza, Rojas, Sosa."
   }
   </script>
+  
+  <style>
+    .video-placeholder {
+      position: relative;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .video-placeholder:hover {
+      transform: scale(1.02);
+    }
+    
+    .video-placeholder .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .video-placeholder:hover .play-button {
+      background: white;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .video-placeholder .play-button i {
+      color: #667eea;
+      font-size: 24px;
+      margin-left: 3px;
+    }
+    
+    .video-placeholder .video-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+    }
+    
+    .video-container {
+      display: none;
+    }
+    
+    .video-container.active {
+      display: block;
+    }
+    
+    .loading-spinner {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .loading-spinner.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -326,7 +397,7 @@
     </div>
     
     <div class="row g-4 gallery-container">
-      <!-- Imagen 1 -->
+      <!-- Imágenes -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/culata-reparacion-bkd-barinas.jpg" class="card-img-top" alt="Reparación especializada de culata BKD">
@@ -334,12 +405,10 @@
             <h4 class="card-title">Reparación Especializada de Culata BKD</h4>
             <p class="card-subtitle text-muted mb-2">Servicio completo para motores diésel</p>
             <p class="card-text">Proceso completo de reparación de <strong>culata bkd</strong> utilizado en motores VAG. Nuestros técnicos realizaron cepillado de precisión, cambio de <strong>valvulas de culata</strong> y rectificación de asientos.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal1">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Imagen 2 -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/valvulas-culata-motor-profesionales.jpg" class="card-img-top" alt="Cambio profesional de válvulas de culata">
@@ -347,12 +416,10 @@
             <h4 class="card-title">Cambio Profesional de Válvulas</h4>
             <p class="card-subtitle text-muted mb-2">Válvulas de admisión y escape de alta calidad</p>
             <p class="card-text">Instalación de nuevas <strong>valvulas de admision y escape</strong> en una <strong>culata de motor</strong> con problemas de compresión. Utilizamos válvulas de primera calidad.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal2">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Imagen 3 -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/culata-audi-a3-20-tdi-reparada.jpeg" class="card-img-top" alt="Culata Audi A3 2.0 TDI reparada">
@@ -360,12 +427,10 @@
             <h4 class="card-title">Culata Audi A3 2.0 TDI Reparada</h4>
             <p class="card-subtitle text-muted mb-2">Restauración completa de rendimiento</p>
             <p class="card-text">Reparación integral de <strong>culata audi a3 2.0 tdi</strong> que presentaba fugas de refrigerante y pérdida de compresión. Realizamos cepillado y cambio de <strong>valvulas de culata</strong>.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal3">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Imagen 4 -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/culata-ford-ranger-25-diesel-rectificada.jpeg" class="card-img-top" alt="Culata Ford Ranger 2.5 Diesel rectificada">
@@ -373,12 +438,10 @@
             <h4 class="card-title">Culata Ford Ranger 2.5 Diesel</h4>
             <p class="card-subtitle text-muted mb-2">Rectificación de precisión para camioneta</p>
             <p class="card-text">Proceso de rectificación de <strong>culata ford ranger 2.5 diesel</strong> que había sufrido sobrecalentamiento. Restauramos la planitud perfecta y cambiamos las <strong>valvulas de culata motor</strong>.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal4">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Imagen 5 -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/culata-mitsubishi-montero-25-servicio.jpeg" class="card-img-top" alt="Servicio completo a culata Mitsubishi Montero 2.5">
@@ -386,12 +449,10 @@
             <h4 class="card-title">Culata Mitsubishi Montero 2.5</h4>
             <p class="card-subtitle text-muted mb-2">Mantenimiento integral para 4x4</p>
             <p class="card-text">Servicio completo a <strong>culata mitsubishi montero 2.5</strong> incluyendo limpieza ultrasónica, cepillado de precisión y cambio de <strong>valvulas de admision y escape</strong>.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal5">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Imagen 6 -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/culata-nissan-pathfinder-reconstruida.jpeg" class="card-img-top" alt="Culata Nissan Pathfinder reconstruida">
@@ -399,12 +460,10 @@
             <h4 class="card-title">Culata Nissan Pathfinder Reconstruida</h4>
             <p class="card-subtitle text-muted mb-2">Proceso completo de reconstrucción</p>
             <p class="card-text">Reconstrucción completa de <strong>culata nissan pathfinder</strong> con grietas internas. Aplicamos soldadura especializada y posterior rectificación para devolver la integridad estructural.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal6">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Imagen 7 -->
       <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
         <div class="card h-100 shadow-sm">
           <img src="images/culata-vw-t5-25-tdi-mantenimiento.jpeg" class="card-img-top" alt="Mantenimiento de culata VW T5 2.5 TDI">
@@ -412,542 +471,206 @@
             <h4 class="card-title">Culata VW T5 2.5 TDI</h4>
             <p class="card-subtitle text-muted mb-2">Mantenimiento preventivo para furgoneta</p>
             <p class="card-text">Mantenimiento preventivo a <strong>culata vw t5 2.5 tdi</strong> de una furgoneta de transporte. Realizamos limpieza de conductos e inspección de <strong>valvulas de culata</strong>.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal7">Ver Detalles</button>
           </div>
         </div>
       </div>
       
-      <!-- Video 1 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
+      <!-- Videos (con carga bajo demanda) -->
+      <div class="col-12 gallery-item" data-category="videos">
+        <div class="card shadow-sm">
           <div class="card-body">
-            <h4 class="card-title">Proceso de Cepillado de Culata BKD</h4>
-            <p class="card-subtitle text-muted mb-2">Técnica de precisión para restaurar planitud</p>
-            <p class="card-text">Video que muestra nuestro proceso de cepillado de <strong>culata bkd</strong> en nuestra máquina de precisión. Observa cómo restauramos la planitud perfecta necesaria para un sellado hermético.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal1">Ver Video</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 2 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Reparación Completa de Culata</h4>
-            <p class="card-subtitle text-muted mb-2">Servicio integral en nuestro taller de Barinas</p>
-            <p class="card-text">Video completo que muestra nuestro proceso de reparación de <strong>culata de motor</strong>, desde el diagnóstico inicial hasta la instalación final. Incluye cepillado y cambio de <strong>valvulas de culata</strong>.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal2">Ver Video</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 3 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Cambio de Válvulas de Admisión y Escape</h4>
-            <p class="card-subtitle text-muted mb-2">Técnica especializada de reemplazo</p>
-            <p class="card-text">Video detallado de nuestro proceso de cambio de <strong>valvulas de admision y escape</strong>. Observa la precisión con que nuestros técnicos realizan este procedimiento fundamental.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3">Ver Video</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 4 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Rectificación de Culata Seat León 2.0 TDI</h4>
-            <p class="card-subtitle text-muted mb-2">Proceso especializado para motor VAG</p>
-            <p class="card-text">Video que muestra la rectificación de <strong>culata seat leon 2.0 tdi 140cv</strong>. Nuestros técnicos demuestran la precisión necesaria para trabajar con estos motores modernos.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal4">Ver Video</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 5 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Mantenimiento de Culata Mitsubishi L200</h4>
-            <p class="card-subtitle text-muted mb-2">Servicio especializado para pickup</p>
-            <p class="card-text">Video completo del mantenimiento de <strong>culata mitsubishi l200</strong>. Incluye limpieza ultrasónica, inspección de <strong>valvulas de culata motor</strong> y verificación de planitud.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal5">Ver Video</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 6 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Diagnóstico de Culata Nissan Navara YD25</h4>
-            <p class="card-subtitle text-muted mb-2">Detección precisa de fallas</p>
-            <p class="card-text">Video que muestra nuestro proceso de diagnóstico para <strong>culata nissan navara yd25</strong>. Utilizamos equipos especializados para detectar grietas microscópicas y deformaciones.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal6">Ver Video</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 7 -->
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="videos">
-        <div class="card h-100 shadow-sm">
-          <div class="card-img-top bg-dark text-center p-4">
-            <i class="fas fa-play-circle fa-4x text-white"></i>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Prueba de Hermeticidad Culata Golf V 2.0 TDI</h4>
-            <p class="card-subtitle text-muted mb-2">Verificación final de calidad</p>
-            <p class="card-text">Video que muestra nuestra prueba de hermeticidad en <strong>culata golf v 2.0 tdi</strong> después de completar el proceso de reparación. Esta prueba final garantiza que no existen fugas.</p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal7">Ver Video</button>
+            <h4 class="card-title mb-4">Videos de Nuestros Procesos de Reparación</h4>
+            <p class="card-text mb-4">Observa nuestros técnicos en acción realizando reparaciones profesionales de culatas con la más alta calidad y precisión. Haz clic en cualquier video para reproducirlo.</p>
+            
+            <div class="row g-4">
+              <!-- Video 1 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="proceso-cepillado-culata-bkd.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Proceso de Reparación de Culata</h6>
+                      <small>Técnica especializada de restauración</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Proceso de Reparación de Culata</h6>
+                    <p class="text-muted small">Nuestro proceso completo de reparación de <strong>culata</strong> restaurando la planitud perfecta para un sellado hermético.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 2 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="reparacion-culata-motor-barinas.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Cepillado de Precisión</h6>
+                      <small>Máquina de alta precisión</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Cepillado de Precisión</h6>
+                    <p class="text-muted small">Cepillado profesional de <strong>culata de motor</strong> para corregir deformaciones y garantizar un funcionamiento óptimo.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 3 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="cambio-valvulas-admision-escape.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Cambio de Válvulas</h6>
+                      <small>Instalación profesional</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Cambio de Válvulas</h6>
+                    <p class="text-muted small">Cambio preciso de <strong>valvulas de admision y escape</strong> para restaurar la compresión y el rendimiento del motor.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 4 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="rectificacion-culata-seat-leon-20-tdi.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Rectificación de Asientos</h6>
+                      <small>Ajuste de precisión</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Rectificación de Asientos</h6>
+                    <p class="text-muted small">Rectificación especializada de asientos de <strong>valvulas de culata</strong> para garantizar un sellado perfecto y duradero.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 5 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="mantenimiento-culata-mitsubishi-l200.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Limpieza Ultrasónica</h6>
+                      <small>Eliminación de sedimentos</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Limpieza Ultrasónica</h6>
+                    <p class="text-muted small">Limpieza profunda de conductos de la <strong>culata</strong> eliminando carbonilla y sedimentos para mejorar el flujo de fluidos.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 6 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="diagnostico-culata-nissan-navara-yd25.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Prueba de Hermeticidad</h6>
+                      <small>Control de calidad final</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Prueba de Hermeticidad</h6>
+                    <p class="text-muted small">Prueba final de hermeticidad en <strong>culata</strong> reparada para garantizar que no existen fugas antes de la instalación.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 7 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="prueba-hermeticidad-culata-golf-v-20-tdi.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Inspección de Calidad</h6>
+                      <small>Verificación final</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Inspección de Calidad</h6>
+                    <p class="text-muted small">Inspección detallada de <strong>culata</strong> reparada verificando cada componente para asegurar la máxima calidad y durabilidad.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Modales para Imágenes -->
-<!-- Modal Imagen 1 -->
-<div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal1Label">Reparación Especializada de Culata BKD</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/culata-reparacion-bkd-barinas.jpg" class="img-fluid mb-3" alt="Reparación especializada de culata BKD">
-        <h4>Servicio completo para motores diésel</h4>
-        <p>Proceso completo de reparación de <strong>culata bkd</strong> utilizado en motores VAG. Nuestros técnicos realizaron cepillado de precisión, cambio de <strong>valvulas de culata</strong> y rectificación de asientos para devolver la compresión original a este motor diésel.</p>
-        <p>El motor BKD es conocido por su durabilidad pero también por ser susceptible a problemas de sobrecalentamiento que pueden afectar la <strong>culata</strong>. Nuestro proceso de reparación incluye:</p>
-        <ul>
-          <li>Inspección visual y con equipos especializados</li>
-          <li>Cepillado de precisión para restaurar planitud</li>
-          <li>Cambio de <strong>valvulas de admision y escape</strong> desgastadas</li>
-          <li>Rectificación de asientos de válvulas</li>
-          <li>Prueba final de hermeticidad</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20reparación%20de%20culata%20BKD%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Imagen 2 -->
-<div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModal2Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal2Label">Cambio Profesional de Válvulas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/valvulas-culata-motor-profesionales.jpg" class="img-fluid mb-3" alt="Cambio profesional de válvulas de culata">
-        <h4>Válvulas de admisión y escape de alta calidad</h4>
-        <p>Instalación de nuevas <strong>valvulas de admision y escape</strong> en una <strong>culata de motor</strong> con problemas de compresión. Utilizamos válvulas de primera calidad que garantizan un sellado perfecto y durabilidad.</p>
-        <p>Las <strong>valvulas de culata</strong> son componentes críticos que afectan directamente el rendimiento del motor. Con el tiempo y el uso, estas pueden desgastarse, quemarse o doblarse, causando:</p>
-        <ul>
-          <li>Pérdida de compresión en uno o más cilindros</li>
-          <li>Consumo excesivo de aceite</li>
-          <li>Rendimiento reducido del motor</li>
-          <li>Mayor emisión de contaminantes</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20cambio%20de%20válvulas%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Imagen 3 -->
-<div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal3Label">Culata Audi A3 2.0 TDI Reparada</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/culata-audi-a3-20-tdi-reparada.jpeg" class="img-fluid mb-3" alt="Culata Audi A3 2.0 TDI reparada">
-        <h4>Restauración completa de rendimiento</h4>
-        <p>Reparación integral de <strong>culata audi a3 2.0 tdi</strong> que presentaba fugas de refrigerante y pérdida de compresión. Realizamos cepillado, cambio de guías y <strong>valvulas de culata</strong> para restaurar el rendimiento original.</p>
-        <p>El motor 2.0 TDI de Audi es conocido por su eficiencia pero también por ser sensible a problemas de sobrecalentamiento. Esta <strong>culata</strong> específica presentaba:</p>
-        <ul>
-          <li>Deformación leve causando pérdida de compresión</li>
-          <li>Fugas de refrigerante hacia los cilindros</li>
-          <li>Desgaste en las <strong>valvulas de admision y escape</strong></li>
-          <li>Acumulación de carbonilla en los conductos</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20reparación%20de%20culata%20Audi%20A3%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Imagen 4 -->
-<div class="modal fade" id="imageModal4" tabindex="-1" aria-labelledby="imageModal4Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal4Label">Culata Ford Ranger 2.5 Diesel</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/culata-ford-ranger-25-diesel-rectificada.jpeg" class="img-fluid mb-3" alt="Culata Ford Ranger 2.5 Diesel rectificada">
-        <h4>Rectificación de precisión para camioneta</h4>
-        <p>Proceso de rectificación de <strong>culata ford ranger 2.5 diesel</strong> que había sufrido sobrecalentamiento. Nuestro equipo restauró la planitud perfecta y realizó el cambio completo de <strong>valvulas de culata motor</strong>.</p>
-        <p>La Ford Ranger con motor 2.5 diésel es una camioneta robusta pero susceptible a problemas de <strong>culata</strong> cuando el sistema de refrigeración no funciona correctamente. Esta unidad llegó a nuestro taller con:</p>
-        <ul>
-          <li>Sobrecalentamiento recurrente</li>
-          <li>Pérdida de potencia y rendimiento</li>
-          <li>Presencia de humo blanco en el escape</li>
-          <li>Mezcla de aceite y refrigerante</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20reparación%20de%20culata%20Ford%20Ranger%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Imagen 5 -->
-<div class="modal fade" id="imageModal5" tabindex="-1" aria-labelledby="imageModal5Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal5Label">Culata Mitsubishi Montero 2.5</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/culata-mitsubishi-montero-25-servicio.jpeg" class="img-fluid mb-3" alt="Servicio completo a culata Mitsubishi Montero 2.5">
-        <h4>Mantenimiento integral para 4x4</h4>
-        <p>Servicio completo a <strong>culata mitsubishi montero 2.5</strong> incluyendo limpieza ultrasónica, cepillado de precisión y cambio de <strong>valvulas de admision y escape</strong>. Ideal para vehículos 4x4 que trabajan en condiciones exigentes.</p>
-        <p>El Mitsubishi Montero es un vehículo 4x4 diseñado para terrenos difíciles, lo que somete su motor a condiciones extremas. Esta <strong>culata</strong> llegó a nuestro taller para un mantenimiento preventivo que incluía:</p>
-        <ul>
-          <li>Inspección detallada de grietas microscópicas</li>
-          <li>Verificación de planitud</li>
-          <li>Limpieza ultrasónica de conductos de aceite y refrigerante</li>
-          <li>Revisión y reemplazo de <strong>valvulas de culata motor</strong> desgastadas</li>
-          <li>Rectificación de asientos de válvulas</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20mantenimiento%20de%20culata%20Mitsubishi%20Montero%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Imagen 6 -->
-<div class="modal fade" id="imageModal6" tabindex="-1" aria-labelledby="imageModal6Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal6Label">Culata Nissan Pathfinder Reconstruida</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/culata-nissan-pathfinder-reconstruida.jpeg" class="img-fluid mb-3" alt="Culata Nissan Pathfinder reconstruida">
-        <h4>Proceso completo de reconstrucción</h4>
-        <p>Reconstrucción completa de <strong>culata nissan pathfinder</strong> con grietas internas. Aplicamos nuestro proceso especializado de soldadura y posterior rectificación para devolver la integridad estructural a esta <strong>culata de motor</strong>.</p>
-        <p>El Nissan Pathfinder es un SUV resistente pero su <strong>culata</strong> puede desarrollar grietas internas debido a ciclos de sobrecalentamiento. Esta unidad presentaba:</p>
-        <ul>
-          <li>Grietas internas entre las válvulas</li>
-          <li>Deformación leve de la superficie</li>
-          <li>Desgaste en las <strong>valvulas de culata</strong></li>
-          <li>Fugas internas de refrigerante</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20reconstrucción%20de%20culata%20Nissan%20Pathfinder%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Imagen 7 -->
-<div class="modal fade" id="imageModal7" tabindex="-1" aria-labelledby="imageModal7Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal7Label">Culata VW T5 2.5 TDI</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="images/culata-vw-t5-25-tdi-mantenimiento.jpeg" class="img-fluid mb-3" alt="Mantenimiento de culata VW T5 2.5 TDI">
-        <h4>Mantenimiento preventivo para furgoneta</h4>
-        <p>Mantenimiento preventivo a <strong>culata vw t5 2.5 tdi</strong> de una furgoneta de transporte. Realizamos limpieza de conductos, inspección de <strong>valvulas de culata</strong> y cambio de juntas para prevenir futuras averías.</p>
-        <p>La Volkswagen Transporter T5 con motor 2.5 TDI es una furgoneta de trabajo muy popular, pero su uso intensivo puede causar desgaste prematuro en la <strong>culata</strong>. Esta unidad llegó a nuestro taller para mantenimiento preventivo que incluía:</p>
-        <ul>
-          <li>Limpieza química y ultrasónica de conductos</li>
-          <li>Inspección de grietas con líquidos penetrantes</li>
-          <li>Verificación de planitud con instrumentos de precisión</li>
-          <li>Revisión de <strong>valvulas de culata motor</strong></li>
-          <li>Cambio de juntas y sellos</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20trabajo%20de%20mantenimiento%20de%20culata%20VW%20T5%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modales para Videos -->
-<!-- Modal Video 1 -->
-<div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal1Label">Proceso de Cepillado de Culata BKD</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/proceso-cepillado-culata-bkd.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Técnica de precisión para restaurar planitud</h4>
-        <p>Video que muestra nuestro proceso de cepillado de <strong>culata bkd</strong> en nuestra máquina de precisión. Observa cómo restauramos la planitud perfecta necesaria para un sellado hermético con la junta de <strong>culata</strong>.</p>
-        <p>El cepillado es un proceso crítico en la reparación de <strong>culatas</strong> que consiste en:</p>
-        <ul>
-          <li>Verificación inicial de la deformación con instrumentos de precisión</li>
-          <li>Fijación segura de la <strong>culata</strong> en la máquina cepilladora</li>
-          <li>Retiro progresivo de material hasta lograr planitud perfecta</li>
-          <li>Verificación final de la superficie con galgas de precisión</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20cepillado%20de%20culata%20BKD%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Video 2 -->
-<div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModal2Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal2Label">Reparación Completa de Culata</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/reparacion-culata-motor-barinas.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Servicio integral en nuestro taller de Barinas</h4>
-        <p>Video completo que muestra nuestro proceso de reparación de <strong>culata de motor</strong>, desde el diagnóstico inicial hasta la instalación final. Incluye cepillado, cambio de <strong>valvulas de culata</strong> y pruebas de hermeticidad.</p>
-        <p>Nuestro proceso integral de reparación de <strong>culatas</strong> incluye:</p>
-        <ul>
-          <li>Diagnóstico inicial con pruebas de hermeticidad</li>
-          <li>Desmontaje completo y limpieza de la <strong>culata</strong></li>
-          <li>Inspección visual y con equipos especializados</li>
-          <li>Cepillado de precisión para restaurar planitud</li>
-          <li>Cambio de <strong>valvulas de admision y escape</strong> si es necesario</li>
-          <li>Rectificación de asientos de válvulas</li>
-          <li>Limpieza ultrasónica de conductos</li>
-          <li>Prueba final de hermeticidad</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20reparación%20completa%20de%20culata%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Video 3 -->
-<div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal3Label">Cambio de Válvulas de Admisión y Escape</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/cambio-valvulas-admision-escape.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Técnica especializada de reemplazo</h4>
-        <p>Video detallado de nuestro proceso de cambio de <strong>valvulas de admision y escape</strong>. Observa la precisión con que nuestros técnicos realizan este procedimiento fundamental para la restauración de la compresión del motor.</p>
-        <p>El cambio de <strong>valvulas de culata</strong> es un procedimiento delicado que requiere:</p>
-        <ul>
-          <li>Uso de herramientas especializadas para compresión de resortes</li>
-          <li>Extracción cuidadosa de las <strong>valvulas de culata motor</strong> desgastadas</li>
-          <li>Inspección de los asientos y guías de válvulas</li>
-          <li>Rectificación de asientos si es necesario</li>
-          <li>Instalación de nuevas válvulas con especificaciones exactas</li>
-          <li>Ajuste preciso de la clearance de válvulas</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20cambio%20de%20válvulas%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Video 4 -->
-<div class="modal fade" id="videoModal4" tabindex="-1" aria-labelledby="videoModal4Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal4Label">Rectificación de Culata Seat León 2.0 TDI</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/rectificacion-culata-seat-leon-20-tdi.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Proceso especializado para motor VAG</h4>
-        <p>Video que muestra la rectificación de <strong>culata seat leon 2.0 tdi 140cv</strong>. Nuestros técnicos demuestran la precisión necesaria para trabajar con estos motores modernos que requieren tolerancias muy estrictas.</p>
-        <p>La <strong>culata</strong> del Seat León 2.0 TDI es un componente de alta tecnología que requiere:</p>
-        <ul>
-          <li>Verificación precisa de la deformación con instrumentos de alta precisión</li>
-          <li>Cepillado con retirada mínima de material para mantener las especificaciones</li>
-          <li>Inspección detallada de los inyectores y su asiento</li>
-          <li>Verificación de los conductos de aceite y refrigerante</li>
-          <li>Prueba final de hermeticidad con presión específica para este motor</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20rectificación%20de%20culata%20Seat%20León%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Video 5 -->
-<div class="modal fade" id="videoModal5" tabindex="-1" aria-labelledby="videoModal5Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal5Label">Mantenimiento de Culata Mitsubishi L200</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/mantenimiento-culata-mitsubishi-l200.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Servicio especializado para pickup</h4>
-        <p>Video completo del mantenimiento de <strong>culata mitsubishi l200</strong>. Incluye limpieza ultrasónica, inspección de <strong>valvulas de culata motor</strong> y verificación de planitud para garantizar un funcionamiento óptimo en condiciones de trabajo exigentes.</p>
-        <p>La Mitsubishi L200 es una pickup diseñada para trabajo pesado, lo que exige un mantenimiento especializado de su <strong>culata</strong>. Nuestro proceso incluye:</p>
-        <ul>
-          <li>Desmontaje completo e inspección visual</li>
-          <li>Limpieza ultrasónica para eliminar depósitos de carbonilla</li>
-          <li>Verificación de planitud con instrumentos de precisión</li>
-          <li>Inspección de <strong>valvulas de admision y escape</strong></li>
-          <li>Prueba de hermeticidad para detectar grietas microscópicas</li>
-          <li>Recomendaciones de mantenimiento preventivo</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20mantenimiento%20de%20culata%20Mitsubishi%20L200%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Video 6 -->
-<div class="modal fade" id="videoModal6" tabindex="-1" aria-labelledby="videoModal6Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal6Label">Diagnóstico de Culata Nissan Navara YD25</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/diagnostico-culata-nissan-navara-yd25.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Detección precisa de fallas</h4>
-        <p>Video que muestra nuestro proceso de diagnóstico para <strong>culata nissan navara yd25</strong>. Utilizamos equipos especializados para detectar grietas microscópicas y deformaciones que no son visibles a simple vista.</p>
-        <p>El diagnóstico preciso es fundamental para una reparación efectiva de la <strong>culata</strong>. Nuestro proceso incluye:</p>
-        <ul>
-          <li>Inspección visual inicial con luz magnificada</li>
-          <li>Prueba de hermeticidad con presión controlada</li>
-          <li>Verificación de planitud con galgas de precisión</li>
-          <li>Aplicación de líquidos penetrantes para detectar grietas</li>
-          <li>Análisis de desgaste en <strong>valvulas de culata</strong> y asientos</li>
-          <li>Inspección de conductos con endoscopio si es necesario</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20diagnóstico%20de%20culata%20Nissan%20Navara%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Video 7 -->
-<div class="modal fade" id="videoModal7" tabindex="-1" aria-labelledby="videoModal7Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModal7Label">Prueba de Hermeticidad Culata Golf V 2.0 TDI</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9">
-          <video src="videos/prueba-hermeticidad-culata-golf-v-20-tdi.mp4" controls></video>
-        </div>
-        <h4 class="mt-3">Verificación final de calidad</h4>
-        <p>Video que muestra nuestra prueba de hermeticidad en <strong>culata golf v 2.0 tdi</strong> después de completar el proceso de reparación. Esta prueba final garantiza que no existen fugas y que la <strong>culata</strong> está lista para la instalación.</p>
-        <p>La prueba de hermeticidad es un paso crucial en nuestro proceso de reparación de <strong>culatas</strong> que incluye:</p>
-        <ul>
-          <li>Sellado de todos los puertos de la <strong>culata</strong></li>
-          <li>Aplicación de presión controlada en los conductos de refrigerante</li>
-          <li>Sumersión en agua para detectar burbujas que indiquen fugas</li>
-          <li>Verificación de la estabilidad de la presión</li>
-          <li>Inspección final de <strong>valvulas de culata motor</strong> y asientos</li>
-          <li>Generación de certificado de hermeticidad</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="https://wa.me/584245197145?text=Hola,%20vi%20el%20video%20de%20prueba%20de%20hermeticidad%20de%20culata%20Golf%20V%20y%20necesito%20información." class="btn btn-primary">Consultar por este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- CONTACTO / COTIZADOR -->
 <section class="py-5 bg-dark text-white" id="contacto">
@@ -1055,5 +778,96 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Filtro de galería
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remover clase active de todos los botones
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Agregar clase active al botón clickeado
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      
+      galleryItems.forEach(item => {
+        if (filter === 'all') {
+          item.style.display = 'block';
+        } else {
+          if (item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+  
+  // Sistema de carga de videos bajo demanda
+  const videoWrappers = document.querySelectorAll('.video-wrapper');
+  
+  videoWrappers.forEach(wrapper => {
+    const placeholder = wrapper.querySelector('.video-placeholder');
+    const videoContainer = wrapper.querySelector('.video-container');
+    const loadingSpinner = wrapper.querySelector('.loading-spinner');
+    const videoFile = wrapper.getAttribute('data-video');
+    
+    placeholder.addEventListener('click', function() {
+      // Mostrar spinner de carga
+      loadingSpinner.classList.add('active');
+      placeholder.style.display = 'none';
+      
+      // Crear elemento de video
+      const video = document.createElement('video');
+      video.src = 'images/' + videoFile;
+      video.controls = true;
+      video.className = 'img-fluid rounded';
+      video.style.width = '100%';
+      
+      // Cuando el video esté listo para reproducir
+      video.addEventListener('canplay', function() {
+        loadingSpinner.classList.remove('active');
+        videoContainer.appendChild(video);
+        videoContainer.classList.add('active');
+        video.play(); // Auto-reproducir cuando esté listo
+      });
+      
+      // Manejar errores de carga
+      video.addEventListener('error', function() {
+        loadingSpinner.classList.remove('active');
+        placeholder.style.display = 'block';
+        placeholder.innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            No se pudo cargar el video. Inténtelo más tarde.
+          </div>
+        `;
+      });
+    });
+  });
+  
+  // Formulario de contacto
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const vehiculo = document.getElementById('vehiculo').value;
+    const servicio = document.getElementById('servicio').value;
+    const sintomas = document.getElementById('sintomas').value;
+    const mensaje = document.getElementById('mensaje').value;
+    
+    const whatsappMessage = `Hola, soy ${nombre}.%0A%0ATeléfono: ${telefono}%0AVehículo: ${vehiculo}%0AServicio requerido: ${servicio}%0ASíntomas: ${sintomas}%0AMensaje adicional: ${mensaje}`;
+    
+    window.open(`https://wa.me/584245197145?text=${whatsappMessage}`, '_blank');
+  });
+});
+</script>
+
 </body>
 </html>
