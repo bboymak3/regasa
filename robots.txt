@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /search/
+Disallow: /?s=
+
+# Sitemaps
+Sitemap: https://tudominio.com/sitemap.xml
+Sitemap: https://tudominio.com/sitemap_index.xml
+
+# Crawl-delay: 10 (opcional, si el sitio es muy grande)
