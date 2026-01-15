@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regasa | Reparación de Culatas en Barinas | Expertos en Culatas de Motor</title>
+  <meta name="description" content="Expertos en reparación de culatas en Barinas. Ofrecemos cepillado, rectificación y puesta a punto de culatas de motor. Especialistas en culata bkd, audi, ford, nissan y más.">
+  <meta name="keywords" content="culatas, culata, camaras, camara, culata bkd, culata motor, culata de motor, culata motor bkd, culata bkd c, culata audi a3 2.0 tdi, culata asv, culata chevrolet luv 2.3, culata mitsubishi montero 2.5, culata vw t5 2.5 tdi, culata ford ranger 2.5 diesel, culata nissan pathfinder, culata suzuki vitara 1.6 16v, culata mitsubishi l200, culata mitsubishi montero 2.8, culata golf v 2.0 tdi, culata hyundai galloper 2.5, culata seat leon 2.0 tdi 140cv, culata ford transit 2.4, culata seat leon 1.9 tdi 110cv, culata nissan terrano 2.7, culata volkswagen transporter 1.9 td, culata m9r, culata nissan navara yd25, culata audi a3 2.0 tdi bkd, culata bkp, culata nissan vanette cargo 2.3, culatas reconstruidas, valvulas culata, valvulas de admision y escape, valvulas de culata, valvulas de culata motor, valvulas de moto">
+  <link rel="canonical" href="https://regasa-barinas.com.ve/"/>
+  <link rel="icon" type="image/jpeg" href="images/logo2.jpeg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Regasa | Reparación de Culatas en Barinas",
+    "image": "https://regasa-barinas.com.ve/images/logo2.jpeg",
+    "telephone": "+584245197145",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Bolívar con Avenida Garguera",
+      "addressLocality": "Barinas",
+      "addressCountry": "VE"
+    },
+    "url": "https://regasa-barinas.com.ve",
+    "description": "Expertos en reparación de culatas en Barinas. Ofrecemos cepillado, rectificación y puesta a punto de culatas de motor. Especialistas en culata bkd, audi, ford, nissan y más.",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "areaServed": "Barinas, incluyendo todos sus municipios: Alberto Arvelo Torrealba, Andrés Eloy Blanco, Antonio José de Sucre, Arismendi, Barinas, Bolívar, Cruz Paredes, Ezequiel Zamora, Obispos, Pedraza, Rojas, Sosa."
+  }
+  </script>
+  
+  <style>
+    .video-placeholder {
+      position: relative;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .video-placeholder:hover {
+      transform: scale(1.02);
+    }
+    
+    .video-placeholder .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .video-placeholder:hover .play-button {
+      background: white;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .video-placeholder .play-button i {
+      color: #667eea;
+      font-size: 24px;
+      margin-left: 3px;
+    }
+    
+    .video-placeholder .video-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+    }
+    
+    .video-container {
+      display: none;
+    }
+    
+    .video-container.active {
+      display: block;
+    }
+    
+    .loading-spinner {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .loading-spinner.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Logo en la parte superior -->
+<div class="text-center py-3 bg-light">
+  <img src="images/logo2.jpeg" alt="Regasa - Reparación de Culatas" style="max-height: 80px;">
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio">REGASA - Expertos en Culatas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#galeria">Galería</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://wa.me/584245197145" class="nav-link text-success">
+            <i class="fab fa-whatsapp me-1"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section py-5 bg-primary text-white" id="inicio">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <h1 class="display-4 fw-bold mb-4">Reparación Profesional de Culatas de Motor en Barinas</h1>
+        <p class="lead mb-4">En Regasa, somos expertos en la reparación, rectificación, cepillado y puesta a punto integral de culatas de motor, también conocidas como cámaras. Recuperamos la integridad de esta pieza vital para devolverle el rendimiento a tu vehículo.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#contacto" class="btn btn-light btn-lg">
+            <i class="fas fa-wrench me-2"></i> Solicitar Diagnóstico
+          </a>
+          <a href="#galeria" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-images me-2"></i> Ver Trabajos
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <img src="images/culata-reparacion-bkd-barinas.jpg" alt="Reparación de culata BKD en Barinas por Regasa" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS DESTACADOS -->
+<section class="py-5" id="servicios">
+  <div class="container">
+    <h2 class="text-center mb-4">Nuestros Servicios de Reparación de Culatas</h2>
+    <p class="text-center text-muted mb-5">Ofrecemos soluciones integrales para la reparación y mantenimiento de culatas de motor en Barinas.</p>
+    <div class="row g-4">
+      <!-- Servicio 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Diagnóstico Preciso</h3>
+            </div>
+            <p class="card-text">Identificamos con exactitud la falla en su <strong>culata de motor</strong> mediante pruebas especializadas. Nuestro diagnóstico exhaustivo permite detectar grietas, deformaciones o fugas.</p>
+            <a href="https://wa.me/584245197145?text=Hola,%20quiero%20agendar%20un%20diagnóstico%20de%20culata." class="btn btn-outline-primary">Agendar Diagnóstico</a>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-ruler-horizontal"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Cepillado de Culata</h3>
+            </div>
+            <p class="card-text">Corregimos deformaciones y grietas superficiales con maquinaria especializada. Este proceso es esencial si la <strong>culata</strong> está alabada o torcida.</p>
+            <a href="https://wa.me/584245197145?text=Hola,%20necesito%20información%20sobre%20el%20cepillado%20de%20culata." class="btn btn-outline-primary">Consultar Servicio</a>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-circle-notch"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Cambio de Válvulas</h3>
+            </div>
+            <p class="card-text">Instalamos <strong>válvulas de culata</strong> nuevas y rectificamos sus asientos para una combustión óptima y máxima compresión.</p>
+            <a href="https://wa.me/584245197145?text=Hola,%20quiero%20cotizar%20el%20cambio%20de%20válvulas%20de%20culata." class="btn btn-outline-primary">Cotizar Ahora</a>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-gasket"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Cambio de Juntas</h3>
+            </div>
+            <p class="card-text">Reemplazamos todo el kit de gomas de la <strong>culata</strong> con repuestos de primera calidad. Utilizamos juntas y sellos que garantizan un sellado hermético.</p>
+            <a href="https://wa.me/584245197145?text=Hola,%20necesito%20cambiar%20las%20juntas%20de%20mi%20culata." class="btn btn-outline-primary">Solicitar Servicio</a>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-spray-can"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Limpieza de Conductos</h3>
+            </div>
+            <p class="card-text">Eliminamos carbonilla y sedimentos de todos los pasajes de refrigerante y aceite de la <strong>camara</strong>. Mejora la refrigeración y lubricación del motor.</p>
+            <a href="https://wa.me/584245197145?text=Hola,%20quiero%20información%20sobre%20la%20limpieza%20de%20conductos%20de%20culata." class="btn btn-outline-primary">Consultar Servicio</a>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Todo Tipo de Motor</h3>
+            </div>
+            <p class="card-text">Atendemos motores a gasolina y diésel, de autos, camionetas, 4x4 y maquinaria agrícola. Especialistas en <strong>culata audi a3 2.0 tdi</strong>, <strong>culata ford ranger 2.5 diesel</strong> y más.</p>
+            <a href="https://wa.me/584245197145?text=Hola,%20tengo%20una%20culata%20de%20[modelo]%20y%20necesito%20reparación." class="btn btn-outline-primary">Consultar por Modelo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="images/valvulas-culata-motor-profesionales.jpg" alt="Cambio profesional de válvulas de culata en Barinas por Regasa" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="mb-4">¿Por Qué Elegir a Regasa en Barinas?</h2>
+        <p class="text-muted mb-4">Somos más que un taller, somos tu especialista de confianza en reparación de culatas.</p>
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-map-marked-alt text-primary me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Expertos en la Zona</h6>
+                <p class="small text-muted mb-0">Especializados exclusivamente en reparación de cámaras y culatas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-tools text-primary me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Tecnología Avanzada</h6>
+                <p class="small text-muted mb-0">Equipos de rectificación y cepillado de alta precisión.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-piggy-bank text-primary me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Ahorro y Confianza</h6>
+                <p class="small text-muted mb-0">Reparar su culata original es más económico y seguro.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-award text-primary me-3 mt-1"></i>
+              <div>
+                <h6 class="mb-1">Resultados Duraderos</h6>
+                <p class="small text-muted mb-0">Restauramos el rendimiento y la eficiencia de su motor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÑALES DE ALERTA -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Señales de Alerta: ¿Cuándo Revisar su Culata?</h2>
+    <p class="text-center text-muted mb-5">Si su vehículo presenta alguno de estos síntomas, es muy probable que la cámara del motor requiera atención profesional:</p>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 border-danger">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-danger text-white rounded-circle p-3 me-3">
+                <i class="fas fa-temperature-high"></i>
+              </div>
+              <h4 class="card-title h5 mb-0">Sobrecalentamiento constante</h4>
+            </div>
+            <p class="card-text">Que no se soluciona cambiando el termostato o el radiador. Una <strong>culata</strong> dañada puede causar sobrecalentamiento crónico.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-danger">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-danger text-white rounded-circle p-3 me-3">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <h4 class="card-title h5 mb-0">Pérdida notable de potencia</h4>
+            </div>
+            <p class="card-text">Aumento excesivo en el consumo de combustible o aceite. Esto indica problemas de compresión en la <strong>culata de motor</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-danger">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-danger text-white rounded-circle p-3 me-3">
+                <i class="fas fa-smog"></i>
+              </div>
+              <h4 class="card-title h5 mb-0">Humo blanco y denso</h4>
+            </div>
+            <p class="card-text">Que sale de forma continua del tubo de escape, incluso con el motor caliente. Es señal de que refrigerante entra en la cámara de combustión.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-danger">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-danger text-white rounded-circle p-3 me-3">
+                <i class="fas fa-oil-can"></i>
+              </div>
+              <h4 class="card-title h5 mb-0">Aceite con apariencia lechosa</h4>
+            </div>
+            <p class="card-text">Como "mayonesa" en la varilla medidora o bajo la tapa de llenado. Esto indica mezcla de refrigerante y aceite por una falla en la <strong>culata</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA DE TRABAJOS -->
+<section id="galeria" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Galería de Trabajos Realizados</h2>
+    <p class="text-center text-muted mb-5">Un vistazo a la calidad y precisión que aplicamos en cada reparación de culatas en Barinas.</p>
+    
+    <!-- Filtros de Galería -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-primary filter-btn active me-2" data-filter="all">Todos</button>
+      <button class="btn btn-outline-primary filter-btn me-2" data-filter="imagenes">Imágenes</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="videos">Videos</button>
+    </div>
+    
+    <div class="row g-4 gallery-container">
+      <!-- Imágenes -->
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/culata-reparacion-bkd-barinas.jpg" class="card-img-top" alt="Reparación especializada de culata BKD">
+          <div class="card-body">
+            <h4 class="card-title">Reparación Especializada de Culata BKD</h4>
+            <p class="card-subtitle text-muted mb-2">Servicio completo para motores diésel</p>
+            <p class="card-text">Proceso completo de reparación de <strong>culata bkd</strong> utilizado en motores VAG. Nuestros técnicos realizaron cepillado de precisión, cambio de <strong>valvulas de culata</strong> y rectificación de asientos.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/valvulas-culata-motor-profesionales.jpg" class="card-img-top" alt="Cambio profesional de válvulas de culata">
+          <div class="card-body">
+            <h4 class="card-title">Cambio Profesional de Válvulas</h4>
+            <p class="card-subtitle text-muted mb-2">Válvulas de admisión y escape de alta calidad</p>
+            <p class="card-text">Instalación de nuevas <strong>valvulas de admision y escape</strong> en una <strong>culata de motor</strong> con problemas de compresión. Utilizamos válvulas de primera calidad.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/culata-audi-a3-20-tdi-reparada.jpeg" class="card-img-top" alt="Culata Audi A3 2.0 TDI reparada">
+          <div class="card-body">
+            <h4 class="card-title">Culata Audi A3 2.0 TDI Reparada</h4>
+            <p class="card-subtitle text-muted mb-2">Restauración completa de rendimiento</p>
+            <p class="card-text">Reparación integral de <strong>culata audi a3 2.0 tdi</strong> que presentaba fugas de refrigerante y pérdida de compresión. Realizamos cepillado y cambio de <strong>valvulas de culata</strong>.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/culata-ford-ranger-25-diesel-rectificada.jpeg" class="card-img-top" alt="Culata Ford Ranger 2.5 Diesel rectificada">
+          <div class="card-body">
+            <h4 class="card-title">Culata Ford Ranger 2.5 Diesel</h4>
+            <p class="card-subtitle text-muted mb-2">Rectificación de precisión para camioneta</p>
+            <p class="card-text">Proceso de rectificación de <strong>culata ford ranger 2.5 diesel</strong> que había sufrido sobrecalentamiento. Restauramos la planitud perfecta y cambiamos las <strong>valvulas de culata motor</strong>.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/culata-mitsubishi-montero-25-servicio.jpeg" class="card-img-top" alt="Servicio completo a culata Mitsubishi Montero 2.5">
+          <div class="card-body">
+            <h4 class="card-title">Culata Mitsubishi Montero 2.5</h4>
+            <p class="card-subtitle text-muted mb-2">Mantenimiento integral para 4x4</p>
+            <p class="card-text">Servicio completo a <strong>culata mitsubishi montero 2.5</strong> incluyendo limpieza ultrasónica, cepillado de precisión y cambio de <strong>valvulas de admision y escape</strong>.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/culata-nissan-pathfinder-reconstruida.jpeg" class="card-img-top" alt="Culata Nissan Pathfinder reconstruida">
+          <div class="card-body">
+            <h4 class="card-title">Culata Nissan Pathfinder Reconstruida</h4>
+            <p class="card-subtitle text-muted mb-2">Proceso completo de reconstrucción</p>
+            <p class="card-text">Reconstrucción completa de <strong>culata nissan pathfinder</strong> con grietas internas. Aplicamos soldadura especializada y posterior rectificación para devolver la integridad estructural.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="imagenes">
+        <div class="card h-100 shadow-sm">
+          <img src="images/culata-vw-t5-25-tdi-mantenimiento.jpeg" class="card-img-top" alt="Mantenimiento de culata VW T5 2.5 TDI">
+          <div class="card-body">
+            <h4 class="card-title">Culata VW T5 2.5 TDI</h4>
+            <p class="card-subtitle text-muted mb-2">Mantenimiento preventivo para furgoneta</p>
+            <p class="card-text">Mantenimiento preventivo a <strong>culata vw t5 2.5 tdi</strong> de una furgoneta de transporte. Realizamos limpieza de conductos e inspección de <strong>valvulas de culata</strong>.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Videos (con carga bajo demanda) -->
+      <div class="col-12 gallery-item" data-category="videos">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title mb-4">Videos de Nuestros Procesos de Reparación</h4>
+            <p class="card-text mb-4">Observa nuestros técnicos en acción realizando reparaciones profesionales de culatas con la más alta calidad y precisión. Haz clic en cualquier video para reproducirlo.</p>
+            
+            <div class="row g-4">
+              <!-- Video 1 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="proceso-cepillado-culata-bkd.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Proceso de Reparación de Culata</h6>
+                      <small>Técnica especializada de restauración</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Proceso de Reparación de Culata</h6>
+                    <p class="text-muted small">Nuestro proceso completo de reparación de <strong>culata</strong> restaurando la planitud perfecta para un sellado hermético.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 2 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="reparacion-culata-motor-barinas.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Cepillado de Precisión</h6>
+                      <small>Máquina de alta precisión</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Cepillado de Precisión</h6>
+                    <p class="text-muted small">Cepillado profesional de <strong>culata de motor</strong> para corregir deformaciones y garantizar un funcionamiento óptimo.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 3 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="cambio-valvulas-admision-escape.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Cambio de Válvulas</h6>
+                      <small>Instalación profesional</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Cambio de Válvulas</h6>
+                    <p class="text-muted small">Cambio preciso de <strong>valvulas de admision y escape</strong> para restaurar la compresión y el rendimiento del motor.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 4 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="rectificacion-culata-seat-leon-20-tdi.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Rectificación de Asientos</h6>
+                      <small>Ajuste de precisión</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Rectificación de Asientos</h6>
+                    <p class="text-muted small">Rectificación especializada de asientos de <strong>valvulas de culata</strong> para garantizar un sellado perfecto y duradero.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 5 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="mantenimiento-culata-mitsubishi-l200.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Limpieza Ultrasónica</h6>
+                      <small>Eliminación de sedimentos</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Limpieza Ultrasónica</h6>
+                    <p class="text-muted small">Limpieza profunda de conductos de la <strong>culata</strong> eliminando carbonilla y sedimentos para mejorar el flujo de fluidos.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 6 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="diagnostico-culata-nissan-navara-yd25.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Prueba de Hermeticidad</h6>
+                      <small>Control de calidad final</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Prueba de Hermeticidad</h6>
+                    <p class="text-muted small">Prueba final de hermeticidad en <strong>culata</strong> reparada para garantizar que no existen fugas antes de la instalación.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Video 7 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="video-wrapper" data-video="prueba-hermeticidad-culata-golf-v-20-tdi.mp4">
+                  <div class="video-placeholder" style="height: 200px;">
+                    <div class="play-button">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-info">
+                      <h6 class="mb-1">Inspección de Calidad</h6>
+                      <small>Verificación final</small>
+                    </div>
+                  </div>
+                  <div class="video-container">
+                    <div class="loading-spinner">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <h6>Inspección de Calidad</h6>
+                    <p class="text-muted small">Inspección detallada de <strong>culata</strong> reparada verificando cada componente para asegurar la máxima calidad y durabilidad.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO / COTIZADOR -->
+<section class="py-5 bg-dark text-white" id="contacto">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h2 class="mb-4">Solicita tu Diagnóstico de Culata</h2>
+        <p class="mb-4">¿Tu vehículo presenta síntomas de problemas en la culata? No esperes a que el daño sea mayor. Contáctanos para un diagnóstico sin costo y recupera el rendimiento de tu motor.</p>
+        <div class="contact-info">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+            <span>Calle Bolívar con Avenida Garguera, Barinas</span>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-phone me-3 text-primary"></i>
+            <span>0424-5197145</span>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fab fa-whatsapp me-3 text-success"></i>
+            <span>WhatsApp: +58 424-5197145</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="fas fa-clock me-3 text-primary"></i>
+            <span>Lun-Sáb: 8:00 AM - 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Formulario de Contacto</h3>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre Completo</label>
+                  <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefono" class="form-label">Teléfono / WhatsApp</label>
+                  <input type="tel" class="form-control" id="telefono" required>
+                </div>
+                <div class="col-12">
+                  <label for="vehiculo" class="form-label">Vehículo (Marca, Modelo, Año)</label>
+                  <input type="text" class="form-control" id="vehiculo" placeholder="Ej: Volkswagen Golf V 2.0 TDI, 2008">
+                </div>
+                <div class="col-md-6">
+                  <label for="servicio" class="form-label">Tipo de Servicio</label>
+                  <select class="form-select" id="servicio" required>
+                    <option value="" selected disabled>Selecciona un servicio...</option>
+                    <option value="Diagnóstico de Culata">Diagnóstico de Culata</option>
+                    <option value="Cepillado de Culata">Cepillado de Culata</option>
+                    <option value="Cambio de Válvulas">Cambio de Válvulas</option>
+                    <option value="Rectificación de Asientos">Rectificación de Asientos</option>
+                    <option value="Reparación Completa">Reparación Completa</option>
+                    <option value="Mantenimiento Preventivo">Mantenimiento Preventivo</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="sintomas" class="form-label">Síntomas que presenta</label>
+                  <select class="form-select" id="sintomas" required>
+                    <option value="" selected disabled>Selecciona los síntomas...</option>
+                    <option value="Sobrecalentamiento">Sobrecalentamiento</option>
+                    <option value="Pérdida de potencia">Pérdida de potencia</option>
+                    <option value="Humo blanco en el escape">Humo blanco en el escape</option>
+                    <option value="Mezcla de aceite y refrigerante">Mezcla de aceite y refrigerante</option>
+                    <option value="Consumo excesivo de aceite/combustible">Consumo excesivo de aceite/combustible</option>
+                    <option value="Varios">Varios de los anteriores</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Describe el problema</label>
+                  <textarea class="form-control" id="mensaje" rows="4" placeholder="Describe con más detalle los problemas que presenta tu vehículo..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="fab fa-whatsapp me-2"></i>Enviar por WhatsApp
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white-50 py-4 text-center">
+  <div class="container">
+    <p class="mb-0">&copy; 2024 Regasa | Reparación de Culatas en Barinas. Todos los derechos reservados.</p>
+    <div class="mt-2">
+      <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white-50"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/584245197145" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1000;">
+  <i class="fab fa-whatsapp fa-3x text-success"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Filtro de galería
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remover clase active de todos los botones
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Agregar clase active al botón clickeado
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      
+      galleryItems.forEach(item => {
+        if (filter === 'all') {
+          item.style.display = 'block';
+        } else {
+          if (item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+  
+  // Sistema de carga de videos bajo demanda
+  const videoWrappers = document.querySelectorAll('.video-wrapper');
+  
+  videoWrappers.forEach(wrapper => {
+    const placeholder = wrapper.querySelector('.video-placeholder');
+    const videoContainer = wrapper.querySelector('.video-container');
+    const loadingSpinner = wrapper.querySelector('.loading-spinner');
+    const videoFile = wrapper.getAttribute('data-video');
+    
+    placeholder.addEventListener('click', function() {
+      // Mostrar spinner de carga
+      loadingSpinner.classList.add('active');
+      placeholder.style.display = 'none';
+      
+      // Crear elemento de video
+      const video = document.createElement('video');
+      video.src = 'images/' + videoFile;
+      video.controls = true;
+      video.className = 'img-fluid rounded';
+      video.style.width = '100%';
+      
+      // Cuando el video esté listo para reproducir
+      video.addEventListener('canplay', function() {
+        loadingSpinner.classList.remove('active');
+        videoContainer.appendChild(video);
+        videoContainer.classList.add('active');
+        video.play(); // Auto-reproducir cuando esté listo
+      });
+      
+      // Manejar errores de carga
+      video.addEventListener('error', function() {
+        loadingSpinner.classList.remove('active');
+        placeholder.style.display = 'block';
+        placeholder.innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            No se pudo cargar el video. Inténtelo más tarde.
+          </div>
+        `;
+      });
+    });
+  });
+  
+  // Formulario de contacto
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const vehiculo = document.getElementById('vehiculo').value;
+    const servicio = document.getElementById('servicio').value;
+    const sintomas = document.getElementById('sintomas').value;
+    const mensaje = document.getElementById('mensaje').value;
+    
+    const whatsappMessage = `Hola, soy ${nombre}.%0A%0ATeléfono: ${telefono}%0AVehículo: ${vehiculo}%0AServicio requerido: ${servicio}%0ASíntomas: ${sintomas}%0AMensaje adicional: ${mensaje}`;
+    
+    window.open(`https://wa.me/584245197145?text=${whatsappMessage}`, '_blank');
+  });
+});
+</script>
+
+</body>
+</html>
