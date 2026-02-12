@@ -7,7 +7,7 @@
   <!-- META TAGS OPTIMIZADOS -->
   <title>Regasa | Rectificadora de Cámaras en Barinas | Reparación de Culatas</title>
   <meta name="description" content="Regasa es tu rectificadora de camaras experta en Barinas. Reparación profesional de culatas o cámaras de motor. Especialistas en cepillado, rectificación y cambio de válvulas. Ahorra reparando tu cámara o culata original.">
-  <meta name="keywords" content="rectificadora de camaras en barinas, reparacion de camaras en barinas, rectificar camara, regasa rectificadora de camaras, culata, camara, culata o camara, reparacion culatas, cambio de valvulas, cepillado culatas">
+  <meta name="keywords" content="rectificadora de camaras en barinas, reparacion de camaras en barinas, rectificar camara, regasa rectificadora de camaras, culata, camara, culata o camara, reparacion culatas, cambio de valvulas, cepillado culatas, rectificadora barinas">
   
   <!-- ETIQUETA CANONICAL (Autoridad Principal) -->
   <link rel="canonical" href="https://regasa.pages.dev/" />
@@ -48,73 +48,26 @@
       color: white;
     }
 
-    .video-placeholder {
-      position: relative;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Estilos para videos responsivos */
+    .video-responsive {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    
-    .video-placeholder:hover {
-      transform: scale(1.02);
+
+    .gallery-video-card video {
+      width: 100%;
+      height: 200px; /* Altura fija para la galería miniatura */
+      object-fit: cover;
+      border-top-left-radius: calc(0.375rem - 1px);
+      border-top-right-radius: calc(0.375rem - 1px);
     }
-    
-    .video-placeholder .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60px;
-      height: 60px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-    
-    .video-placeholder:hover .play-button {
-      background: white;
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-    
-    .video-placeholder .play-button i {
-      color: #667eea;
-      font-size: 24px;
-      margin-left: 3px;
-    }
-    
-    .video-placeholder .video-info {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 15px;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-      color: white;
-    }
-    
-    .video-container {
-      display: none;
-    }
-    
-    .video-container.active {
-      display: block;
-    }
-    
-    .loading-spinner {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .loading-spinner.active {
-      display: block;
+
+    .section-highlight {
+      background-color: #f8f9fa;
+      border-left: 5px solid #0d6efd;
     }
   </style>
 </head>
@@ -126,7 +79,7 @@
 </div>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#inicio">REGASA - Rectificadora de Cámaras</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,7 +94,10 @@
           <a class="nav-link" href="#servicios">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#galeria">Galería</a>
+          <a class="nav-link" href="#galeria-img">Galería</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#videos">Videos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contacto">Contacto</a>
@@ -168,13 +124,14 @@
           <a href="#contacto" class="btn btn-light btn-lg">
             <i class="fas fa-wrench me-2"></i> Solicitar Diagnóstico
           </a>
-          <a href="#galeria" class="btn btn-outline-light btn-lg">
+          <a href="#galeria-img" class="btn btn-outline-light btn-lg">
             <i class="fas fa-images me-2"></i> Ver Trabajos
           </a>
         </div>
       </div>
       <div class="col-lg-5">
-        <img src="images/culata-reparacion-bkd-barinas-regasa-reparacion-de-camaras-en-barinas.jpg" alt="Reparación de culata o cámara BKD en Barinas por Regasa" class="img-fluid rounded shadow">
+        <!-- Imagen cambiada según solicitud -->
+        <img src="images/rectificar-camara-barinas-de-regasa.jpeg" alt="Rectificar cámara Barinas - Regasa" class="img-fluid rounded shadow">
       </div>
     </div>
   </div>
@@ -208,6 +165,33 @@
               <h5 class="fw-bold">📈 Ahorras Dinero</h5>
               <p class="small text-muted">Rectificar tu culata o cámara original cuesta menos que comprarla nueva.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUEVA SECCIÓN: RECTIFICADORA BARINAS -->
+<section class="py-5 section-highlight">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-3">Tu Rectificadora Barinas de Confianza</h2>
+        <p class="text-muted mb-4">Como la principal <strong>rectificadora barinas</strong>, nos comprometemos a devolverle la vida a tu motor. Contamos con equipos modernos y un equipo técnico capacitado para resolver problemas complejos en culatas de gasolina y diésel.</p>
+        <p class="text-muted">No importando la marca de tu vehículo, en Regasa ofrecemos garantía y confianza en cada reparación.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-12">
+            <img src="images/taller-mecanico-barinas-rectificar-camara-regasa-rectificadora.jpeg" alt="Taller mecánico Barinas - Rectificadora Regasa" class="img-fluid rounded shadow w-100">
+          </div>
+          <div class="col-6">
+             <img src="images/mantenimiento-de-camaras-barinas.jpeg" alt="Mantenimiento de cámaras Barinas" class="img-fluid rounded shadow w-100">
+          </div>
+          <div class="col-6">
+            <!-- Imagen complementaria o logo para rellenar espacio visualmente si es necesario -->
+            <img src="images/valvulas-culata-motor-profesionales.jpg" alt="Detalle de válvulas en mantenimiento" class="img-fluid rounded shadow w-100" style="object-fit: cover; height: 100%;">
           </div>
         </div>
       </div>
@@ -306,8 +290,29 @@
   </div>
 </section>
 
-<!-- POR QUÉ ELEGIRNOS -->
+<!-- VIDEO PRINCIPAL DE SERVICIOS -->
 <section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold">Nuestro Proceso de Trabajo</h2>
+          <p class="text-muted">Vea cómo trabajamos en nuestra rectificadora.</p>
+        </div>
+        <div class="ratio ratio-16x9 shadow-lg overflow-hidden rounded">
+            <!-- Video agregado según solicitud -->
+            <video controls poster="images/logo2.jpeg">
+                <source src="mp4/camaras-barinas-rectificar-camara-culata-en-barinas-cercademi.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="py-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 mb-4 mb-lg-0">
@@ -360,7 +365,7 @@
 </section>
 
 <!-- SEÑALES DE ALERTA -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4 fw-bold">Señales de Alerta: ¿Cuándo Revisar su Culata o Cámara?</h2>
     <p class="text-center text-muted mb-5">Si su vehículo presenta alguno de estos síntomas, es muy probable que la cámara o culata del motor requiera atención profesional.</p>
@@ -421,8 +426,8 @@
   </div>
 </section>
 
-<!-- GALERÍA DE TRABAJOS -->
-<section id="galeria" class="py-5 bg-light">
+<!-- GALERÍA DE TRABAJOS (IMÁGENES) -->
+<section id="galeria-img" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Galería de Trabajos Realizados</h2>
     <p class="text-center text-muted mb-5">Un vistazo a la calidad que aplicamos en cada reparación de culata o cámara en Barinas.</p>
@@ -431,6 +436,7 @@
       <!-- Imágenes -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm">
+          <!-- Nota: Se mantiene este nombre de archivo porque coincide específicamente con la tarjeta de "Culata BKD" -->
           <img src="images/cculata-reparacion-bkd-barinas-regasa-reparacion-de-camaras-en-barinas.jpg" class="card-img-top" alt="Reparación especializada de culata o cámara BKD">
           <div class="card-body">
             <h4 class="card-title">Reparación Especializada de Culata BKD</h4>
@@ -486,9 +492,10 @@
       
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm">
-          <img src="images/culata-nissan-pathfinder-reconstruida.jpeg" class="card-img-top" alt="Culata o cámara Nissan Pathfinder reconstruida">
+          <!-- Imagen cambiada según solicitud -->
+          <img src="images/rectificadorabarinas-donde-rectificar-una-camara-o-culata-serca-de-mi.jpeg" class="card-img-top" alt="Dónde rectificar una cámara o culata cerca de mí en Barinas">
           <div class="card-body">
-            <h4 class="card-title">Culata Nissan Pathfinder Reconstruida</h4>
+            <h4 class="card-title">Nissan Pathfinder Reconstruida</h4>
             <p class="card-subtitle text-muted mb-2">Proceso completo de reconstrucción</p>
             <p class="card-text">Reconstrucción completa de <strong>culata o cámara nissan pathfinder</strong> con soldadura especializada.</p>
           </div>
@@ -505,6 +512,121 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA DE VIDEOS (AGREGADO SOLICITADO) -->
+<section id="videos" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Galería de Videos de Procesos</h2>
+    <p class="text-center text-muted mb-5">Vea en detalle cómo realizamos nuestros trabajos de rectificación en Barinas.</p>
+    
+    <div class="row g-4">
+      <!-- Video 1 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/camaras-barinas-rectificar-camara-culata-en-barinas-cercademi.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Rectificar Cámara y Culata en Barinas</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/cambio-valvulas-admision-escape.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Cambio de Válvulas Admisión y Escape</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/diagnostico-culata-nissan-navara-yd25.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Diagnóstico Culata Nissan Navara YD25</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/mantenimiento-culata-mitsubishi-l200.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Mantenimiento Culata Mitsubishi L200</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/proceso-cepillado-culata-bkd.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Proceso Cepillado Culata BKD</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 6 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/prueba-hermeticidad-culata-golf-v-20-tdi.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Prueba Hermeticidad Culata Golf V 2.0 TDI</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 7 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/rectificacion-culata-seat-leon-20-tdi.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Rectificación Culata Seat Leon 2.0 TDI</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 8 -->
+      <div class="col-md-6 col-lg-3 gallery-video-card">
+        <div class="card h-100 shadow-sm">
+          <video controls preload="none">
+            <source src="mp4/reparacion-culata-motor-barinas.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Reparación Culata Motor en Barinas</h5>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
