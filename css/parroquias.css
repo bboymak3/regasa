@@ -1,0 +1,39 @@
+/* Estilos compartidos: landings por parroquia y galería de trabajos */
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: white;
+}
+.hero-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+.breadcrumb-light .breadcrumb-item a { color: rgba(255,255,255,.85); }
+.breadcrumb-light .breadcrumb-item.active,
+.breadcrumb-light .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.65); }
+.section-highlight {
+  background-color: #f8f9fa;
+  border-left: 5px solid #0d6efd;
+}
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.gal-img {
+  height: 220px;
+  object-fit: cover;
+}
+.dropdown-scroll {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+@media (max-width: 576px) {
+  .hero-img { height: 240px; }
+}
+video, img { max-width: 100%; }
