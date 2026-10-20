@@ -69,3 +69,37 @@ video, img { max-width: 100%; }
 
 /* Franja "Atendido por Omar Santiago" */
 .atendido-por { background: linear-gradient(135deg, #0a58ca 0%, #084298 100%); color: #fff; }
+
+/* Barra fija de contacto (Llamar / WhatsApp) */
+body { padding-bottom: 84px; }
+.barra-contacto {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1030;
+  display: flex;
+  gap: 12px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: #111;
+  box-shadow: 0 -4px 14px rgba(0,0,0,.35);
+}
+.btn-barra {
+  flex: 1 1 0;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+  text-decoration: none;
+  transition: filter .15s ease;
+}
+.btn-barra:hover, .btn-barra:focus { color: #fff; filter: brightness(1.08); }
+.btn-llamar { background: #dc3232; margin-left: auto; }
+.btn-wa { background: #25d366; margin-right: auto; }
+@media (max-width: 400px) { .btn-barra { font-size: 1rem; } }
