@@ -63,3 +63,6 @@ video, img { max-width: 100%; }
 .mapa-barinas { height: 460px; width: 100%; border-radius: .5rem; box-shadow: 0 4px 12px rgba(0,0,0,.12); z-index: 0; }
 .leyenda-punto { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.25); vertical-align: middle; }
 @media (max-width: 576px) { .mapa-barinas { height: 360px; } }
+
+/* Etiquetas largas (nombres de parroquias) hacen salto de línea en móvil */
+.hero-section .badge { white-space: normal; text-align: left; line-height: 1.3; }
