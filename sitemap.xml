@@ -44,12 +44,84 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- Galería y landings por parroquia (Municipio Barinas) -->
+    <!-- Galería y landings por municipio y parroquia (estado Barinas) -->
     <url>
         <loc>https://regasa.pages.dev/galeria-trabajos-reparacion-camaras-barinas</loc>
         <lastmod>2026-10-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-barinas-capital</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-sabaneta</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-socopo</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-arismendi</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-barinitas</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-barrancas</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-santa-barbara</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-obispos</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-ciudad-bolivia</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-libertad</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-ciudad-de-nutrias</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-el-canton</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-alto-barinas</loc>
@@ -131,6 +203,18 @@
     </url>
     <url>
         <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-torunos</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-santa-rosa</loc>
+        <lastmod>2026-10-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://regasa.pages.dev/reparacion-de-camaras-para-autos-la-luz-obispos</loc>
         <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
