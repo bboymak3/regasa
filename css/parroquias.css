@@ -66,3 +66,6 @@ video, img { max-width: 100%; }
 
 /* Etiquetas largas (nombres de parroquias) hacen salto de línea en móvil */
 .hero-section .badge { white-space: normal; text-align: left; line-height: 1.3; }
+
+/* Franja "Atendido por Omar Santiago" */
+.atendido-por { background: linear-gradient(135deg, #0a58ca 0%, #084298 100%); color: #fff; }
